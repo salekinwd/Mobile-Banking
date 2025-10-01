@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title> Mobile Banking Home Page</title>
+</head>
+<body class="bg-slate-800">
+    <section class="max-w-md min-h-screen mx-auto py-6 bg-white">
+        <header>
+            <nav class="flex justify-around  items-center">
+                <img class="w-16" src="assets/Group.png" alt="">
+                <div>
+                    <h3 class="text-3xl font-extrabold"> ৳ <span id="main-balance">5000</span></h3>
+                    <p class="border rounded-md bg-blue-600 p-1 text-white">Available Balance</p>
+                </div>
+                <button class="btn btn-neutral bg-blue-600 border-none- mt-4">Log Out</button>
+            </nav>
+            <section class="mt-10 p-10">
+            <h1 class="text-2xl font-bold m-2">🔥 Welcome to Payooo!</h1>
+            <p>Enjoy easy and convenient financial services with us. Cash out charge is low and </p>
+            <div class="cards grid grid-cols-3 mt-10 gap-2 p-2">
+                <div id="add-money-box" class="boxs border cursor-pointer p-5 rounded-sm text-center">
+                    <img class="mx-auto w-8" src="assets/addMoney-img.png" alt="">
+                    <h3 class="font-bold">Add Money</h3>
+
+                </div>
+                <div id="cashout-box" class="boxs border  cursor-pointer p-5 rounded-sm text-center">
+                    <img class="mx-auto w-8" src="assets/cashOut img.jpg" alt="">
+                    <h3 class="font-bold">Cash Out</h3>
+
+                </div>
+                <div id="send-money-box" class="boxs border  cursor-pointer p-5 rounded-sm text-center">
+                    <img class="mx-auto w-8" src="assets/sendMoney-ing.png" alt="">
+                    <h3 class="font-bold">Send Money</h3>
+
+                </div>
+                <div id="pay-bill-box" class="boxs border  cursor-pointer p-5 rounded-sm text-center">
+                    <img class="mx-auto w-8" src="assets/pay-bill.jpg" alt="">
+                    <h3 class="font-bold">Pay Bill</h3>
+
+                </div>
+                <div id="transfer-money-box" class="boxs border  cursor-pointer p-5 rounded-sm text-center">
+                    <img class="mx-auto w-18" src="assets/transfermoney-img.jpg" alt="">
+                    <h3 class="font-bold">Transfer Money</h3>
+
+                </div>
+                <div id="transaction-box" class="boxs border  cursor-pointer p-5 rounded-sm text-center">
+                    <img class="mx-auto w-8" src="assets/transaction-img.png" alt="">
+                    <h3 class="font-bold">Transaction History</h3>
+
+                </div>
+            </div>
+            <section id="addMoney" class="mt-10">
+                <h2 class="text-xl font-bold">Add money</h2>
+                <div class="">
+  <div class="hero-content flex-col lg:flex-row-reverse">
+    
+    <div class="card w-full max-w-sm shrink-0 shadow-2xl">
+      <div class="card-body">
+        <legend>Select Bank</legend>
+        <select id="all-bank" class="select">
+            <option disabled selected>Select Bank</option>
+            <option value="bkash">bkash</option>
+            <option value="Nagad">Nagad</option>
+            <option value="Rocket">Rocket</option>
+            </select>
+          <fieldset class="fieldset">
+          <label class="label">Account Number</label>
+          <input id="account-number" value="01614912936" type="number" class="input" placeholder="Type Your Number " required/>
+          <label class="label ">PIN</label>
+          <input id="pin-number" type="number" value="1234" class="input " placeholder="Password" required />
+          <label class="label">Amount</label>
+          <input id="amount-number" type="number" class="input" placeholder="Type Your Amount " required/>
+          <div><a class="link link-hover">Forgot password?</a></div>
+          <button id="btn-add-money" class="btn btn-neutral bg-blue-600 border-none- mt-4">Add Money</button>
+        </fieldset>
+      </div>
+    </div> 
+  </div>
+</div>
+            </section>
+
+            <section id="sendMoney" class="mt-10">
+    <h2 class="text-xl font-bold">Send Money</h2>
+    <div class="">
+        <div class="hero-content flex-col lg:flex-row-reverse">
+            <div class="card w-full max-w-sm shrink-0 shadow-2xl">
+                <div class="card-body">
+                    <fieldset class="fieldset">
+                        <label class="label">Recipient Account Number</label>
+                        <input id="send-account-number" type="number" class="input" placeholder="Type Recipient Number" required/>
+
+                        <label class="label">PIN</label>
+                        <input id="send-pin" type="number" class="input" placeholder="Your PIN" required/>
+
+                        <label class="label">Amount</label>
+                        <input id="send-amount" type="number" class="input" placeholder="Type Amount" required/>
+
+                        <button id="btn-send-money" class="btn btn-neutral bg-blue-600 border-none mt-4">Send Money</button>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+           <section id="payBill" class="mt-10">
+    <h2 class="text-xl font-bold">Pay Bill</h2>
+    <div class="">
+        <div class="hero-content flex-col lg:flex-row-reverse">
+            <div class="card w-full max-w-sm shrink-0 shadow-2xl">
+                <div class="card-body">
+                    <fieldset class="fieldset">
+                        <label class="label">Select Biller</label>
+                        <select id="bill-biller" class="select">
+                            <option disabled selected>Select Biller</option>
+                            <option value="Gas">Gas</option>
+                            <option value="Electricity">Electricity</option>
+                            <option value="Water">Water</option>
+                            <option value="Internet">Internet</option>
+                        </select>
+
+                        <label class="label">Account Number</label>
+                        <input id="bill-account-number" type="number" class="input" placeholder="Type Your Number" required/>
+
+                        <label class="label">PIN</label>
+                        <input id="bill-pin" type="number" class="input" placeholder="Your PIN" required/>
+
+                        <label class="label">Amount</label>
+                        <input id="bill-amount" type="number" class="input" placeholder="Enter Amount" required/>
+
+                        <button id="btn-pay-bill" class="btn btn-neutral bg-blue-600 border-none mt-4">Pay Bill</button>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="transferMoney" class="mt-10">
+    <h2 class="text-xl font-bold">Transfer Money</h2>
+    <div class="">
+        <div class="hero-content flex-col lg:flex-row-reverse">
+            <div class="card w-full max-w-sm shrink-0 shadow-2xl">
+                <div class="card-body">
+                    <fieldset class="fieldset">
+                        <label class="label">Select Bank</label>
+                        <select id="transfer-bank" class="select">
+                            <option disabled selected>Select Bank</option>
+                            <option value="Bkash">Bkash</option>
+                            <option value="Nagad">Nagad</option>
+                            <option value="Rocket">Rocket</option>
+                        </select>
+
+                        <label class="label">Recipient Name</label>
+                        <input id="transfer-recipient-name" type="text" class="input" placeholder="Recipient Name" required/>
+
+                        <label class="label">Recipient Account Number</label>
+                        <input id="transfer-account-number" type="number" class="input" placeholder="Recipient Account Number" required/>
+
+                        <label class="label">PIN</label>
+                        <input id="transfer-pin" type="number" class="input" placeholder="Your PIN" required/>
+
+                        <label class="label">Amount</label>
+                        <input id="transfer-amount" type="number" class="input" placeholder="Enter Amount" required/>
+
+                        <label class="label">Note (Optional)</label>
+                        <input id="transfer-note" type="text" class="input" placeholder="Add a note (e.g., Rent, Gift)"/>
+
+                        <button id="btn-transfer-money" class="btn btn-neutral bg-blue-600 border-none mt-4">Transfer Money</button>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+            <section id="cashout" class="mt-10">
+                <h2 class="text-xl font-bold">Cash Out</h2>
+                <div class="w-full max-w-sm shrink-0 shadow-2xl  ">
+                     <fieldset class="fieldset">
+          <label class="label">Account Number</label>
+          <input id="cashout-account-number" value="01614912936" type="number" class="input" placeholder="Type Your Number " required/>
+          <label class="label ">PIN</label>
+          <input id="cashout-pin" type="number" value="1234" class="input " placeholder="Password" required />
+          <label class="label">Amount</label>
+          <input id="cashOut-amount" type="number" class="input" placeholder="Type Your Amount " required/>
+        
+          <button id="btn-cash-out" class="btn btn-neutral bg-blue-600 border-none- mt-4">Cash Out</button>
+        </fieldset>
+                </div>
+
+            </section>
+            <section id="Transaction-history">
+                <h1 class="text-3xl font-bold text-red-600 text-center p-3">Transaction-History</h1>
+            <div id="transaction-container"></div>  
+            </section>
+
+
+
+        </section>
+        </header>
+        
+       
+    </section>
+     <script src="script/cashout.js"></script>
+     <script src="utilites/toggle2.js"></script>
+    <script src="utilites/utilites.js"></script>
+    <script src="script/addmoney2.js"></script>
+    <script src="script/transaction.js"></script>
+    <script src="script/sendMoney.js"></script>
+    <script src="script/paybill.js"></script>
+    <script src="script/transferMoney.js"></script>
+</body>
+</html>
