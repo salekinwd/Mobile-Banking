@@ -1,46 +1,4 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mobile Banking </title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-</head>
-<body class="bg-slate-800">
-    <section class="max-w-md min-h-screen mx-auto py-6 bg-gray-200">
-        <header>
-            <nav class="flex justify-center items-center mt-8">
-                <div class="mt-10 relative flex justify-center items-center w-9/12 mb-10">
-                    <img class="w-48 absolute" src="assets/bg.png" alt="">
-                    <img class="w-16" src="assets/Group.png" alt="">
-                </div>
-            </nav>
-        </header>
 
-       
-         <div class="">
-  <div class="hero-content flex-col lg:flex-row-reverse">
-    
-    <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl ">
-      <form class="card-body ">
-        <fieldset class="fieldset">
-          <label class="label">Account Number</label>
-          <input id="account-number" value="01614912936" type="number" class="input" placeholder="Type Your Number " required/>
-          <label class="label ">PIN</label>
-          <input id="pin-number" type="number" value="1234" class="input " placeholder="Password" required />
-          <div><a class="link link-hover">Forgot password?</a></div>
-          <button id="btn-login" class="btn btn-neutral bg-blue-600 border-none- mt-4">Login</button>
-        </fieldset>
-    </form>
-    </div>
-  </div>
-</div>
-
-    </section>
-    <script src="script/login.js"></script>
-</body>
-</html> -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -52,35 +10,31 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body class="bg-slate-800">
-    <section class="max-w-md min-h-screen mx-auto py-6 px-4 bg-gray-200 rounded-lg shadow-lg">
-        <!-- Header -->
-        <header>
-            <nav class="flex justify-center items-center mt-8">
-                <div class="relative flex justify-center items-center w-full mb-10">
-                    <img class="w-32 sm:w-48 absolute" src="assets/bg.png" alt="Background">
-                    <img class="w-12 sm:w-16 relative" src="assets/Group.png" alt="Logo">
+    <section class="min-h-screen flex justify-center items-center py-6 px-4">
+        <div class="w-full max-w-md bg-gray-200 rounded-lg shadow-lg p-4 sm:p-6">
+            <!-- Header -->
+            <header>
+                <nav class="flex justify-center items-center mt-4 mb-6 relative">
+                    <img class="w-24 sm:w-32 absolute top-0 left-1/2 -translate-x-1/2" src="assets/bg.png" alt="Background">
+                    <img class="w-12 sm:w-16 relative z-10" src="assets/Group.png" alt="Logo">
+                </nav>
+            </header>
+
+            <!-- Login Section -->
+            <div class="hero-content flex flex-col items-center">
+                <div class="card bg-base-100 w-full shadow-2xl p-4 sm:p-6 rounded-lg">
+                    <form class="card-body">
+                        <fieldset class="flex flex-col gap-4">
+                            <label class="label">Account Number</label>
+                            <input id="account-number" value="01614912936" type="number" class="input input-bordered w-full" placeholder="Type Your Number" required />
+
+                            <label class="label">PIN</label>
+                            <input id="pin-number" type="number" value="1234" class="input input-bordered w-full" placeholder="Password" required />
+
+                            <button id="btn-login" class="btn btn-neutral bg-blue-600 border-none w-full mt-4">Login</button>
+                        </fieldset>
+                    </form>
                 </div>
-            </nav>
-        </header>
-
-        <!-- Login Section -->
-        <div class="hero-content flex flex-col lg:flex-row-reverse items-center">
-            <div class="card bg-base-100 w-full max-w-sm shadow-2xl p-4 sm:p-6 rounded-lg">
-                <form class="card-body">
-                    <fieldset>
-                        <label class="label">Account Number</label>
-                        <input id="account-number" value="01614912936" type="number" class="input input-bordered w-full mb-4" placeholder="Type Your Number" required />
-                        
-                        <label class="label">PIN</label>
-                        <input id="pin-number" type="number" value="1234" class="input input-bordered w-full mb-4" placeholder="Password" required />
-                        
-                        <div class="mb-4">
-                            <a class="link link-hover text-sm">Forgot password?</a>
-                        </div>
-
-                        <button id="btn-login" class="btn btn-neutral bg-blue-600 border-none w-full">Login</button>
-                    </fieldset>
-                </form>
             </div>
         </div>
     </section>
@@ -88,3 +42,5 @@
     <script src="script/login.js"></script>
 </body>
 </html>
+
+
